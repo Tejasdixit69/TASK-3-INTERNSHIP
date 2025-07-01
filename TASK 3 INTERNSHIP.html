@@ -1,0 +1,1858 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:SimSun;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:DengXian;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Consolas;
+	panose-1:2 11 6 9 2 2 4 3 2 4;}
+@font-face
+	{font-family:"\@SimSun";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"\@DengXian";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	font-size:10.0pt;
+	font-family:"Calibri",sans-serif;}
+.MsoChpDefault
+	{font-size:10.0pt;}
+@page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:1.0in 1.25in 1.0in 1.25in;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal style='margin-left:0in;text-indent:0in'><span
+style='font-size:12.0pt;font-family:SimSun'>3. </span><span style='font-size:
+12.0pt;font-family:SimSun'>Tic-Tac-Toe Web Application To build a tic-tac-toe
+web application, you can use HTML, CSS, and JavaScript. By implementing
+functions to handle user clicks, track game state, and check for winning
+conditions, you can create an interactive and engaging tic-tac-toe game. With
+these technologies and functionalities, users can play against each other or
+against an AI opponent, aiming to get three markers in a row to win the game.</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;font-family:SimSun'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;font-family:SimSun'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;font-family:SimSun'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;font-family:SimSun'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:12.0pt;font-family:SimSun'>Index.html
+- </span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:gray;background:#1F1F1F'>&lt;!</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#569CD6;background:#1F1F1F'>DOCTYPE</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>html</span><span
+style='font-size:8.0pt;font-family:Consolas;color:gray;background:#1F1F1F'>&gt;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:gray;background:#1F1F1F'>&lt;</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#569CD6;background:#1F1F1F'>html</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>lang</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>=</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>&quot;en&quot;</span><span
+style='font-size:8.0pt;font-family:Consolas;color:gray;background:#1F1F1F'>&gt;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:gray;background:#1F1F1F'>&lt;</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#569CD6;background:#1F1F1F'>head</span><span
+style='font-size:8.0pt;font-family:Consolas;color:gray;background:#1F1F1F'>&gt;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;color:gray;
+background:#1F1F1F'>&lt;</span><span style='font-size:8.0pt;font-family:Consolas;
+color:#569CD6;background:#1F1F1F'>meta</span><span style='font-size:8.0pt;
+font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>charset</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>=</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>&quot;UTF-8&quot;</span><span
+style='font-size:8.0pt;font-family:Consolas;color:gray;background:#1F1F1F'>&gt;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;color:gray;
+background:#1F1F1F'>&lt;</span><span style='font-size:8.0pt;font-family:Consolas;
+color:#569CD6;background:#1F1F1F'>meta</span><span style='font-size:8.0pt;
+font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>name</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>=</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>&quot;viewport&quot;</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>content</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>=</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>&quot;width=device-width,
+initial-scale=1.0&quot;</span><span style='font-size:8.0pt;font-family:Consolas;
+color:gray;background:#1F1F1F'>&gt;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;color:gray;
+background:#1F1F1F'>&lt;</span><span style='font-size:8.0pt;font-family:Consolas;
+color:#569CD6;background:#1F1F1F'>title</span><span style='font-size:8.0pt;
+font-family:Consolas;color:gray;background:#1F1F1F'>&gt;</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>Tic-Tac-Toe</span><span
+style='font-size:8.0pt;font-family:Consolas;color:gray;background:#1F1F1F'>&lt;/</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#569CD6;background:#1F1F1F'>title</span><span
+style='font-size:8.0pt;font-family:Consolas;color:gray;background:#1F1F1F'>&gt;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;color:gray;
+background:#1F1F1F'>&lt;</span><span style='font-size:8.0pt;font-family:Consolas;
+color:#569CD6;background:#1F1F1F'>link</span><span style='font-size:8.0pt;
+font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>rel</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>=</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>&quot;stylesheet&quot;</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>href</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>=</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>&quot;style.css&quot;</span><span
+style='font-size:8.0pt;font-family:Consolas;color:gray;background:#1F1F1F'>&gt;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:gray;background:#1F1F1F'>&lt;/</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#569CD6;background:#1F1F1F'>head</span><span
+style='font-size:8.0pt;font-family:Consolas;color:gray;background:#1F1F1F'>&gt;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:gray;background:#1F1F1F'>&lt;</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#569CD6;background:#1F1F1F'>body</span><span
+style='font-size:8.0pt;font-family:Consolas;color:gray;background:#1F1F1F'>&gt;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;color:gray;
+background:#1F1F1F'>&lt;</span><span style='font-size:8.0pt;font-family:Consolas;
+color:#569CD6;background:#1F1F1F'>div</span><span style='font-size:8.0pt;
+font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>class</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>=</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>&quot;container&quot;</span><span
+style='font-size:8.0pt;font-family:Consolas;color:gray;background:#1F1F1F'>&gt;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; &nbsp; &nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;
+color:gray;background:#1F1F1F'>&lt;</span><span style='font-size:8.0pt;
+font-family:Consolas;color:#569CD6;background:#1F1F1F'>h1</span><span
+style='font-size:8.0pt;font-family:Consolas;color:gray;background:#1F1F1F'>&gt;</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>Tic-Tac-Toe</span><span
+style='font-size:8.0pt;font-family:Consolas;color:gray;background:#1F1F1F'>&lt;/</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#569CD6;background:#1F1F1F'>h1</span><span
+style='font-size:8.0pt;font-family:Consolas;color:gray;background:#1F1F1F'>&gt;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; &nbsp; &nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;
+color:gray;background:#1F1F1F'>&lt;</span><span style='font-size:8.0pt;
+font-family:Consolas;color:#569CD6;background:#1F1F1F'>div</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>id</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>=</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>&quot;status&quot;</span><span
+style='font-size:8.0pt;font-family:Consolas;color:gray;background:#1F1F1F'>&gt;</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>Player
+X's turn</span><span style='font-size:8.0pt;font-family:Consolas;color:gray;
+background:#1F1F1F'>&lt;/</span><span style='font-size:8.0pt;font-family:Consolas;
+color:#569CD6;background:#1F1F1F'>div</span><span style='font-size:8.0pt;
+font-family:Consolas;color:gray;background:#1F1F1F'>&gt;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; &nbsp; &nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;
+color:gray;background:#1F1F1F'>&lt;</span><span style='font-size:8.0pt;
+font-family:Consolas;color:#569CD6;background:#1F1F1F'>div</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>id</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>=</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>&quot;game-board&quot;</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>class</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>=</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>&quot;board&quot;</span><span
+style='font-size:8.0pt;font-family:Consolas;color:gray;background:#1F1F1F'>&gt;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style='font-size:8.0pt;
+font-family:Consolas;color:#6A9955;background:#1F1F1F'>&lt;!-- The game cells
+will be generated by JavaScript --&gt;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style='font-size:8.0pt;
+font-family:Consolas;color:gray;background:#1F1F1F'>&lt;</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#569CD6;background:#1F1F1F'>div</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>class</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>=</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>&quot;cell&quot;</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>data-index</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>=</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>&quot;0&quot;</span><span
+style='font-size:8.0pt;font-family:Consolas;color:gray;background:#1F1F1F'>&gt;&lt;/</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#569CD6;background:#1F1F1F'>div</span><span
+style='font-size:8.0pt;font-family:Consolas;color:gray;background:#1F1F1F'>&gt;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style='font-size:8.0pt;
+font-family:Consolas;color:gray;background:#1F1F1F'>&lt;</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#569CD6;background:#1F1F1F'>div</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>class</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>=</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>&quot;cell&quot;</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>data-index</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>=</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>&quot;1&quot;</span><span
+style='font-size:8.0pt;font-family:Consolas;color:gray;background:#1F1F1F'>&gt;&lt;/</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#569CD6;background:#1F1F1F'>div</span><span
+style='font-size:8.0pt;font-family:Consolas;color:gray;background:#1F1F1F'>&gt;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style='font-size:8.0pt;
+font-family:Consolas;color:gray;background:#1F1F1F'>&lt;</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#569CD6;background:#1F1F1F'>div</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>class</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>=</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>&quot;cell&quot;</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>data-index</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>=</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>&quot;2&quot;</span><span
+style='font-size:8.0pt;font-family:Consolas;color:gray;background:#1F1F1F'>&gt;&lt;/</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#569CD6;background:#1F1F1F'>div</span><span
+style='font-size:8.0pt;font-family:Consolas;color:gray;background:#1F1F1F'>&gt;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style='font-size:8.0pt;
+font-family:Consolas;color:gray;background:#1F1F1F'>&lt;</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#569CD6;background:#1F1F1F'>div</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>class</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>=</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>&quot;cell&quot;</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>data-index</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>=</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>&quot;3&quot;</span><span
+style='font-size:8.0pt;font-family:Consolas;color:gray;background:#1F1F1F'>&gt;&lt;/</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#569CD6;background:#1F1F1F'>div</span><span
+style='font-size:8.0pt;font-family:Consolas;color:gray;background:#1F1F1F'>&gt;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style='font-size:8.0pt;
+font-family:Consolas;color:gray;background:#1F1F1F'>&lt;</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#569CD6;background:#1F1F1F'>div</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>class</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>=</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>&quot;cell&quot;</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>data-index</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>=</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>&quot;4&quot;</span><span
+style='font-size:8.0pt;font-family:Consolas;color:gray;background:#1F1F1F'>&gt;&lt;/</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#569CD6;background:#1F1F1F'>div</span><span
+style='font-size:8.0pt;font-family:Consolas;color:gray;background:#1F1F1F'>&gt;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style='font-size:8.0pt;
+font-family:Consolas;color:gray;background:#1F1F1F'>&lt;</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#569CD6;background:#1F1F1F'>div</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>class</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>=</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>&quot;cell&quot;</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>data-index</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>=</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>&quot;5&quot;</span><span
+style='font-size:8.0pt;font-family:Consolas;color:gray;background:#1F1F1F'>&gt;&lt;/</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#569CD6;background:#1F1F1F'>div</span><span
+style='font-size:8.0pt;font-family:Consolas;color:gray;background:#1F1F1F'>&gt;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style='font-size:8.0pt;
+font-family:Consolas;color:gray;background:#1F1F1F'>&lt;</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#569CD6;background:#1F1F1F'>div</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>class</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>=</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>&quot;cell&quot;</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>data-index</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>=</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>&quot;6&quot;</span><span
+style='font-size:8.0pt;font-family:Consolas;color:gray;background:#1F1F1F'>&gt;&lt;/</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#569CD6;background:#1F1F1F'>div</span><span
+style='font-size:8.0pt;font-family:Consolas;color:gray;background:#1F1F1F'>&gt;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style='font-size:8.0pt;
+font-family:Consolas;color:gray;background:#1F1F1F'>&lt;</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#569CD6;background:#1F1F1F'>div</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>class</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>=</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>&quot;cell&quot;</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>data-index</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>=</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>&quot;7&quot;</span><span
+style='font-size:8.0pt;font-family:Consolas;color:gray;background:#1F1F1F'>&gt;&lt;/</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#569CD6;background:#1F1F1F'>div</span><span
+style='font-size:8.0pt;font-family:Consolas;color:gray;background:#1F1F1F'>&gt;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style='font-size:8.0pt;
+font-family:Consolas;color:gray;background:#1F1F1F'>&lt;</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#569CD6;background:#1F1F1F'>div</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>class</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>=</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>&quot;cell&quot;</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>data-index</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>=</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>&quot;8&quot;</span><span
+style='font-size:8.0pt;font-family:Consolas;color:gray;background:#1F1F1F'>&gt;&lt;/</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#569CD6;background:#1F1F1F'>div</span><span
+style='font-size:8.0pt;font-family:Consolas;color:gray;background:#1F1F1F'>&gt;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; &nbsp; &nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;
+color:gray;background:#1F1F1F'>&lt;/</span><span style='font-size:8.0pt;
+font-family:Consolas;color:#569CD6;background:#1F1F1F'>div</span><span
+style='font-size:8.0pt;font-family:Consolas;color:gray;background:#1F1F1F'>&gt;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; &nbsp; &nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;
+color:gray;background:#1F1F1F'>&lt;</span><span style='font-size:8.0pt;
+font-family:Consolas;color:#569CD6;background:#1F1F1F'>button</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>id</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>=</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>&quot;reset-button&quot;</span><span
+style='font-size:8.0pt;font-family:Consolas;color:gray;background:#1F1F1F'>&gt;</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>Reset
+Game</span><span style='font-size:8.0pt;font-family:Consolas;color:gray;
+background:#1F1F1F'>&lt;/</span><span style='font-size:8.0pt;font-family:Consolas;
+color:#569CD6;background:#1F1F1F'>button</span><span style='font-size:8.0pt;
+font-family:Consolas;color:gray;background:#1F1F1F'>&gt;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;color:gray;
+background:#1F1F1F'>&lt;/</span><span style='font-size:8.0pt;font-family:Consolas;
+color:#569CD6;background:#1F1F1F'>div</span><span style='font-size:8.0pt;
+font-family:Consolas;color:gray;background:#1F1F1F'>&gt;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;color:gray;
+background:#1F1F1F'>&lt;</span><span style='font-size:8.0pt;font-family:Consolas;
+color:#569CD6;background:#1F1F1F'>script</span><span style='font-size:8.0pt;
+font-family:Consolas;color:#D4D4D4;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>src</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#D4D4D4;background:#1F1F1F'>=</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>&quot;script.js&quot;</span><span
+style='font-size:8.0pt;font-family:Consolas;color:gray;background:#1F1F1F'>&gt;&lt;/</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#569CD6;background:#1F1F1F'>script</span><span
+style='font-size:8.0pt;font-family:Consolas;color:gray;background:#1F1F1F'>&gt;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:gray;background:#1F1F1F'>&lt;/</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#569CD6;background:#1F1F1F'>bo</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#F44747;background:#1F1F1F'>&lt;/html</span><span
+style='font-size:8.0pt;font-family:Consolas;color:gray;background:#1F1F1F'>&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:12.0pt;font-family:SimSun'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:12.0pt;font-family:SimSun'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:12.0pt;font-family:SimSun'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:12.0pt;font-family:SimSun'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:12.0pt;font-family:SimSun'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:12.0pt;font-family:SimSun'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:12.0pt;font-family:SimSun'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:12.0pt;font-family:SimSun'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:12.0pt;font-family:SimSun'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:12.0pt;font-family:SimSun'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:12.0pt;font-family:SimSun'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:12.0pt;font-family:SimSun'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:12.0pt;font-family:SimSun'>Style.css
+- </span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#D7BA7D;background:#1F1F1F'>body</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>
+{</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;
+background:#1F1F1F'>font-family</span><span style='font-size:8.0pt;font-family:
+Consolas;color:#CCCCCC;background:#1F1F1F'>: </span><span style='font-size:
+8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>sans-serif</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;
+background:#1F1F1F'>display</span><span style='font-size:8.0pt;font-family:
+Consolas;color:#CCCCCC;background:#1F1F1F'>: </span><span style='font-size:
+8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>flex</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;
+background:#1F1F1F'>justify-content</span><span style='font-size:8.0pt;
+font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>: </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>center</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;
+background:#1F1F1F'>align-items</span><span style='font-size:8.0pt;font-family:
+Consolas;color:#CCCCCC;background:#1F1F1F'>: </span><span style='font-size:
+8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>center</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;
+background:#1F1F1F'>min-height</span><span style='font-size:8.0pt;font-family:
+Consolas;color:#CCCCCC;background:#1F1F1F'>: </span><span style='font-size:
+8.0pt;font-family:Consolas;color:#B5CEA8;background:#1F1F1F'>100vh</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;
+background:#1F1F1F'>background-color</span><span style='font-size:8.0pt;
+font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>: </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>#f0f0f0</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;
+background:#1F1F1F'>margin</span><span style='font-size:8.0pt;font-family:Consolas;
+color:#CCCCCC;background:#1F1F1F'>: </span><span style='font-size:8.0pt;
+font-family:Consolas;color:#B5CEA8;background:#1F1F1F'>0</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>}</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#D7BA7D;background:#1F1F1F'>.container</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>
+{</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;
+background:#1F1F1F'>text-align</span><span style='font-size:8.0pt;font-family:
+Consolas;color:#CCCCCC;background:#1F1F1F'>: </span><span style='font-size:
+8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>center</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;
+background:#1F1F1F'>background-color</span><span style='font-size:8.0pt;
+font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>: </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>#fff</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;
+background:#1F1F1F'>padding</span><span style='font-size:8.0pt;font-family:
+Consolas;color:#CCCCCC;background:#1F1F1F'>: </span><span style='font-size:
+8.0pt;font-family:Consolas;color:#B5CEA8;background:#1F1F1F'>20px</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;
+background:#1F1F1F'>border-radius</span><span style='font-size:8.0pt;
+font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>: </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#B5CEA8;background:#1F1F1F'>8px</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;
+background:#1F1F1F'>box-shadow</span><span style='font-size:8.0pt;font-family:
+Consolas;color:#CCCCCC;background:#1F1F1F'>: </span><span style='font-size:
+8.0pt;font-family:Consolas;color:#B5CEA8;background:#1F1F1F'>0</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#B5CEA8;background:#1F1F1F'>0</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#B5CEA8;background:#1F1F1F'>10px</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#DCDCAA;background:#1F1F1F'>rgba</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>(</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#B5CEA8;background:#1F1F1F'>0</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>,
+</span><span style='font-size:8.0pt;font-family:Consolas;color:#B5CEA8;
+background:#1F1F1F'>0</span><span style='font-size:8.0pt;font-family:Consolas;
+color:#CCCCCC;background:#1F1F1F'>, </span><span style='font-size:8.0pt;
+font-family:Consolas;color:#B5CEA8;background:#1F1F1F'>0</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>,
+</span><span style='font-size:8.0pt;font-family:Consolas;color:#B5CEA8;
+background:#1F1F1F'>0.1</span><span style='font-size:8.0pt;font-family:Consolas;
+color:#CCCCCC;background:#1F1F1F'>);</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>}</span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#D7BA7D;background:#1F1F1F'>h1</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>
+{</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;
+background:#1F1F1F'>margin-top</span><span style='font-size:8.0pt;font-family:
+Consolas;color:#CCCCCC;background:#1F1F1F'>: </span><span style='font-size:
+8.0pt;font-family:Consolas;color:#B5CEA8;background:#1F1F1F'>0</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>}</span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#D7BA7D;background:#1F1F1F'>#status</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>
+{</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;
+background:#1F1F1F'>margin-bottom</span><span style='font-size:8.0pt;
+font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>: </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#B5CEA8;background:#1F1F1F'>20px</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;
+background:#1F1F1F'>font-size</span><span style='font-size:8.0pt;font-family:
+Consolas;color:#CCCCCC;background:#1F1F1F'>: </span><span style='font-size:
+8.0pt;font-family:Consolas;color:#B5CEA8;background:#1F1F1F'>1.2em</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;
+background:#1F1F1F'>font-weight</span><span style='font-size:8.0pt;font-family:
+Consolas;color:#CCCCCC;background:#1F1F1F'>: </span><span style='font-size:
+8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>bold</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>}</span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#D7BA7D;background:#1F1F1F'>.board</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>
+{</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;
+background:#1F1F1F'>display</span><span style='font-size:8.0pt;font-family:
+Consolas;color:#CCCCCC;background:#1F1F1F'>: </span><span style='font-size:
+8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>grid</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;
+background:#1F1F1F'>grid-template-columns</span><span style='font-size:8.0pt;
+font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>: </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#DCDCAA;background:#1F1F1F'>repeat</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>(</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#B5CEA8;background:#1F1F1F'>3</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>,
+</span><span style='font-size:8.0pt;font-family:Consolas;color:#B5CEA8;
+background:#1F1F1F'>100px</span><span style='font-size:8.0pt;font-family:Consolas;
+color:#CCCCCC;background:#1F1F1F'>);</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;
+background:#1F1F1F'>grid-template-rows</span><span style='font-size:8.0pt;
+font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>: </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#DCDCAA;background:#1F1F1F'>repeat</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>(</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#B5CEA8;background:#1F1F1F'>3</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>,
+</span><span style='font-size:8.0pt;font-family:Consolas;color:#B5CEA8;
+background:#1F1F1F'>100px</span><span style='font-size:8.0pt;font-family:Consolas;
+color:#CCCCCC;background:#1F1F1F'>);</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;
+background:#1F1F1F'>gap</span><span style='font-size:8.0pt;font-family:Consolas;
+color:#CCCCCC;background:#1F1F1F'>: </span><span style='font-size:8.0pt;
+font-family:Consolas;color:#B5CEA8;background:#1F1F1F'>5px</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;
+background:#1F1F1F'>margin</span><span style='font-size:8.0pt;font-family:Consolas;
+color:#CCCCCC;background:#1F1F1F'>: </span><span style='font-size:8.0pt;
+font-family:Consolas;color:#B5CEA8;background:#1F1F1F'>0</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>auto</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;
+background:#1F1F1F'>border</span><span style='font-size:8.0pt;font-family:Consolas;
+color:#CCCCCC;background:#1F1F1F'>: </span><span style='font-size:8.0pt;
+font-family:Consolas;color:#B5CEA8;background:#1F1F1F'>2px</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>solid</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>#333</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>}</span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#D7BA7D;background:#1F1F1F'>.cell</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>
+{</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;
+background:#1F1F1F'>width</span><span style='font-size:8.0pt;font-family:Consolas;
+color:#CCCCCC;background:#1F1F1F'>: </span><span style='font-size:8.0pt;
+font-family:Consolas;color:#B5CEA8;background:#1F1F1F'>100px</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;
+background:#1F1F1F'>height</span><span style='font-size:8.0pt;font-family:Consolas;
+color:#CCCCCC;background:#1F1F1F'>: </span><span style='font-size:8.0pt;
+font-family:Consolas;color:#B5CEA8;background:#1F1F1F'>100px</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;
+background:#1F1F1F'>background-color</span><span style='font-size:8.0pt;
+font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>: </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>#eee</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;
+background:#1F1F1F'>display</span><span style='font-size:8.0pt;font-family:
+Consolas;color:#CCCCCC;background:#1F1F1F'>: </span><span style='font-size:
+8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>flex</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;
+background:#1F1F1F'>justify-content</span><span style='font-size:8.0pt;
+font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>: </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>center</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;
+background:#1F1F1F'>align-items</span><span style='font-size:8.0pt;font-family:
+Consolas;color:#CCCCCC;background:#1F1F1F'>: </span><span style='font-size:
+8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>center</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;
+background:#1F1F1F'>font-size</span><span style='font-size:8.0pt;font-family:
+Consolas;color:#CCCCCC;background:#1F1F1F'>: </span><span style='font-size:
+8.0pt;font-family:Consolas;color:#B5CEA8;background:#1F1F1F'>3em</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;
+background:#1F1F1F'>cursor</span><span style='font-size:8.0pt;font-family:Consolas;
+color:#CCCCCC;background:#1F1F1F'>: </span><span style='font-size:8.0pt;
+font-family:Consolas;color:#CE9178;background:#1F1F1F'>pointer</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;
+background:#1F1F1F'>border</span><span style='font-size:8.0pt;font-family:Consolas;
+color:#CCCCCC;background:#1F1F1F'>: </span><span style='font-size:8.0pt;
+font-family:Consolas;color:#B5CEA8;background:#1F1F1F'>1px</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>solid</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>#ccc</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;
+background:#1F1F1F'>transition</span><span style='font-size:8.0pt;font-family:
+Consolas;color:#CCCCCC;background:#1F1F1F'>: background-color </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#B5CEA8;background:#1F1F1F'>0.3s</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>ease</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>}</span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#D7BA7D;background:#1F1F1F'>.cell:hover</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>
+{</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;
+background:#1F1F1F'>background-color</span><span style='font-size:8.0pt;
+font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>: </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>#ddd</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>}</span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#D7BA7D;background:#1F1F1F'>.cell.x</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>
+{</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;
+background:#1F1F1F'>color</span><span style='font-size:8.0pt;font-family:Consolas;
+color:#CCCCCC;background:#1F1F1F'>: </span><span style='font-size:8.0pt;
+font-family:Consolas;color:#CE9178;background:#1F1F1F'>navy</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>}</span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#D7BA7D;background:#1F1F1F'>.cell.o</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>
+{</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;
+background:#1F1F1F'>color</span><span style='font-size:8.0pt;font-family:Consolas;
+color:#CCCCCC;background:#1F1F1F'>: </span><span style='font-size:8.0pt;
+font-family:Consolas;color:#CE9178;background:#1F1F1F'>maroon</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>}</span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#D7BA7D;background:#1F1F1F'>#reset-button</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>
+{</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;
+background:#1F1F1F'>margin-top</span><span style='font-size:8.0pt;font-family:
+Consolas;color:#CCCCCC;background:#1F1F1F'>: </span><span style='font-size:
+8.0pt;font-family:Consolas;color:#B5CEA8;background:#1F1F1F'>20px</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;
+background:#1F1F1F'>padding</span><span style='font-size:8.0pt;font-family:
+Consolas;color:#CCCCCC;background:#1F1F1F'>: </span><span style='font-size:
+8.0pt;font-family:Consolas;color:#B5CEA8;background:#1F1F1F'>10px</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#B5CEA8;background:#1F1F1F'>20px</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;
+background:#1F1F1F'>font-size</span><span style='font-size:8.0pt;font-family:
+Consolas;color:#CCCCCC;background:#1F1F1F'>: </span><span style='font-size:
+8.0pt;font-family:Consolas;color:#B5CEA8;background:#1F1F1F'>1em</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;
+background:#1F1F1F'>cursor</span><span style='font-size:8.0pt;font-family:Consolas;
+color:#CCCCCC;background:#1F1F1F'>: </span><span style='font-size:8.0pt;
+font-family:Consolas;color:#CE9178;background:#1F1F1F'>pointer</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;
+background:#1F1F1F'>border</span><span style='font-size:8.0pt;font-family:Consolas;
+color:#CCCCCC;background:#1F1F1F'>: </span><span style='font-size:8.0pt;
+font-family:Consolas;color:#CE9178;background:#1F1F1F'>none</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;
+background:#1F1F1F'>border-radius</span><span style='font-size:8.0pt;
+font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>: </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#B5CEA8;background:#1F1F1F'>4px</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;
+background:#1F1F1F'>background-color</span><span style='font-size:8.0pt;
+font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>: </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>#007bff</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;
+background:#1F1F1F'>color</span><span style='font-size:8.0pt;font-family:Consolas;
+color:#CCCCCC;background:#1F1F1F'>: </span><span style='font-size:8.0pt;
+font-family:Consolas;color:#CE9178;background:#1F1F1F'>white</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;
+background:#1F1F1F'>transition</span><span style='font-size:8.0pt;font-family:
+Consolas;color:#CCCCCC;background:#1F1F1F'>: background-color </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#B5CEA8;background:#1F1F1F'>0.3s</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>ease</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>}</span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#D7BA7D;background:#1F1F1F'>#reset-button:hover</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>
+{</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;
+background:#1F1F1F'>background-color</span><span style='font-size:8.0pt;
+font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>: </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>#0056b3</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>}</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:12.0pt;font-family:SimSun'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:12.0pt;font-family:SimSun'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:12.0pt;font-family:SimSun'>Script.js
+- </span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#569CD6;background:#1F1F1F'>const</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#4FC1FF;background:#1F1F1F'>cells</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#D4D4D4;background:#1F1F1F'>=</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>document</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>.</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#DCDCAA;background:#1F1F1F'>querySelectorAll</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>(</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>'.cell'</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>);</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#569CD6;background:#1F1F1F'>const</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#4FC1FF;background:#1F1F1F'>statusDisplay</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#D4D4D4;background:#1F1F1F'>=</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>document</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>.</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#DCDCAA;background:#1F1F1F'>getElementById</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>(</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>'status'</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>);</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#569CD6;background:#1F1F1F'>const</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#4FC1FF;background:#1F1F1F'>resetButton</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#D4D4D4;background:#1F1F1F'>=</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>document</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>.</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#DCDCAA;background:#1F1F1F'>getElementById</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>(</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>'reset-button'</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>);</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#569CD6;background:#1F1F1F'>let</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>gameActive</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#D4D4D4;background:#1F1F1F'>=</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#569CD6;background:#1F1F1F'>true</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#569CD6;background:#1F1F1F'>let</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>currentPlayer</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#D4D4D4;background:#1F1F1F'>=</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>'X'</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#569CD6;background:#1F1F1F'>let</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>gameState</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#D4D4D4;background:#1F1F1F'>=</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>
+[</span><span style='font-size:8.0pt;font-family:Consolas;color:#CE9178;
+background:#1F1F1F'>''</span><span style='font-size:8.0pt;font-family:Consolas;
+color:#CCCCCC;background:#1F1F1F'>, </span><span style='font-size:8.0pt;
+font-family:Consolas;color:#CE9178;background:#1F1F1F'>''</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>,
+</span><span style='font-size:8.0pt;font-family:Consolas;color:#CE9178;
+background:#1F1F1F'>''</span><span style='font-size:8.0pt;font-family:Consolas;
+color:#CCCCCC;background:#1F1F1F'>, </span><span style='font-size:8.0pt;
+font-family:Consolas;color:#CE9178;background:#1F1F1F'>''</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>,
+</span><span style='font-size:8.0pt;font-family:Consolas;color:#CE9178;
+background:#1F1F1F'>''</span><span style='font-size:8.0pt;font-family:Consolas;
+color:#CCCCCC;background:#1F1F1F'>, </span><span style='font-size:8.0pt;
+font-family:Consolas;color:#CE9178;background:#1F1F1F'>''</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>,
+</span><span style='font-size:8.0pt;font-family:Consolas;color:#CE9178;
+background:#1F1F1F'>''</span><span style='font-size:8.0pt;font-family:Consolas;
+color:#CCCCCC;background:#1F1F1F'>, </span><span style='font-size:8.0pt;
+font-family:Consolas;color:#CE9178;background:#1F1F1F'>''</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>,
+</span><span style='font-size:8.0pt;font-family:Consolas;color:#CE9178;
+background:#1F1F1F'>''</span><span style='font-size:8.0pt;font-family:Consolas;
+color:#CCCCCC;background:#1F1F1F'>]; </span><span style='font-size:8.0pt;
+font-family:Consolas;color:#6A9955;background:#1F1F1F'>// Represents the 3x3
+board</span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#569CD6;background:#1F1F1F'>const</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#4FC1FF;background:#1F1F1F'>winningConditions</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#D4D4D4;background:#1F1F1F'>=</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>
+[</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; [</span><span style='font-size:8.0pt;font-family:Consolas;color:#B5CEA8;
+background:#1F1F1F'>0</span><span style='font-size:8.0pt;font-family:Consolas;
+color:#CCCCCC;background:#1F1F1F'>, </span><span style='font-size:8.0pt;
+font-family:Consolas;color:#B5CEA8;background:#1F1F1F'>1</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>,
+</span><span style='font-size:8.0pt;font-family:Consolas;color:#B5CEA8;
+background:#1F1F1F'>2</span><span style='font-size:8.0pt;font-family:Consolas;
+color:#CCCCCC;background:#1F1F1F'>],</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; [</span><span style='font-size:8.0pt;font-family:Consolas;color:#B5CEA8;
+background:#1F1F1F'>3</span><span style='font-size:8.0pt;font-family:Consolas;
+color:#CCCCCC;background:#1F1F1F'>, </span><span style='font-size:8.0pt;
+font-family:Consolas;color:#B5CEA8;background:#1F1F1F'>4</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>,
+</span><span style='font-size:8.0pt;font-family:Consolas;color:#B5CEA8;
+background:#1F1F1F'>5</span><span style='font-size:8.0pt;font-family:Consolas;
+color:#CCCCCC;background:#1F1F1F'>],</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; [</span><span style='font-size:8.0pt;font-family:Consolas;color:#B5CEA8;
+background:#1F1F1F'>6</span><span style='font-size:8.0pt;font-family:Consolas;
+color:#CCCCCC;background:#1F1F1F'>, </span><span style='font-size:8.0pt;
+font-family:Consolas;color:#B5CEA8;background:#1F1F1F'>7</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>,
+</span><span style='font-size:8.0pt;font-family:Consolas;color:#B5CEA8;
+background:#1F1F1F'>8</span><span style='font-size:8.0pt;font-family:Consolas;
+color:#CCCCCC;background:#1F1F1F'>],</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; [</span><span style='font-size:8.0pt;font-family:Consolas;color:#B5CEA8;
+background:#1F1F1F'>0</span><span style='font-size:8.0pt;font-family:Consolas;
+color:#CCCCCC;background:#1F1F1F'>, </span><span style='font-size:8.0pt;
+font-family:Consolas;color:#B5CEA8;background:#1F1F1F'>3</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>,
+</span><span style='font-size:8.0pt;font-family:Consolas;color:#B5CEA8;
+background:#1F1F1F'>6</span><span style='font-size:8.0pt;font-family:Consolas;
+color:#CCCCCC;background:#1F1F1F'>],</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; [</span><span style='font-size:8.0pt;font-family:Consolas;color:#B5CEA8;
+background:#1F1F1F'>1</span><span style='font-size:8.0pt;font-family:Consolas;
+color:#CCCCCC;background:#1F1F1F'>, </span><span style='font-size:8.0pt;
+font-family:Consolas;color:#B5CEA8;background:#1F1F1F'>4</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>,
+</span><span style='font-size:8.0pt;font-family:Consolas;color:#B5CEA8;
+background:#1F1F1F'>7</span><span style='font-size:8.0pt;font-family:Consolas;
+color:#CCCCCC;background:#1F1F1F'>],</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; [</span><span style='font-size:8.0pt;font-family:Consolas;color:#B5CEA8;
+background:#1F1F1F'>2</span><span style='font-size:8.0pt;font-family:Consolas;
+color:#CCCCCC;background:#1F1F1F'>, </span><span style='font-size:8.0pt;
+font-family:Consolas;color:#B5CEA8;background:#1F1F1F'>5</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>,
+</span><span style='font-size:8.0pt;font-family:Consolas;color:#B5CEA8;
+background:#1F1F1F'>8</span><span style='font-size:8.0pt;font-family:Consolas;
+color:#CCCCCC;background:#1F1F1F'>],</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; [</span><span style='font-size:8.0pt;font-family:Consolas;color:#B5CEA8;
+background:#1F1F1F'>0</span><span style='font-size:8.0pt;font-family:Consolas;
+color:#CCCCCC;background:#1F1F1F'>, </span><span style='font-size:8.0pt;
+font-family:Consolas;color:#B5CEA8;background:#1F1F1F'>4</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>,
+</span><span style='font-size:8.0pt;font-family:Consolas;color:#B5CEA8;
+background:#1F1F1F'>8</span><span style='font-size:8.0pt;font-family:Consolas;
+color:#CCCCCC;background:#1F1F1F'>],</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; [</span><span style='font-size:8.0pt;font-family:Consolas;color:#B5CEA8;
+background:#1F1F1F'>2</span><span style='font-size:8.0pt;font-family:Consolas;
+color:#CCCCCC;background:#1F1F1F'>, </span><span style='font-size:8.0pt;
+font-family:Consolas;color:#B5CEA8;background:#1F1F1F'>4</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>,
+</span><span style='font-size:8.0pt;font-family:Consolas;color:#B5CEA8;
+background:#1F1F1F'>6</span><span style='font-size:8.0pt;font-family:Consolas;
+color:#CCCCCC;background:#1F1F1F'>]</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>];</span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#569CD6;background:#1F1F1F'>function</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#DCDCAA;background:#1F1F1F'>handleCellPlayed</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>(</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>clickedCell</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>,
+</span><span style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;
+background:#1F1F1F'>clickedCellIndex</span><span style='font-size:8.0pt;
+font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>) {</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;
+background:#1F1F1F'>gameState</span><span style='font-size:8.0pt;font-family:
+Consolas;color:#CCCCCC;background:#1F1F1F'>[</span><span style='font-size:8.0pt;
+font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>clickedCellIndex</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>]
+</span><span style='font-size:8.0pt;font-family:Consolas;color:#D4D4D4;
+background:#1F1F1F'>=</span><span style='font-size:8.0pt;font-family:Consolas;
+color:#CCCCCC;background:#1F1F1F'> </span><span style='font-size:8.0pt;
+font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>currentPlayer</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;
+background:#1F1F1F'>clickedCell</span><span style='font-size:8.0pt;font-family:
+Consolas;color:#CCCCCC;background:#1F1F1F'>.</span><span style='font-size:8.0pt;
+font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>innerHTML</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#D4D4D4;background:#1F1F1F'>=</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>currentPlayer</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;
+background:#1F1F1F'>clickedCell</span><span style='font-size:8.0pt;font-family:
+Consolas;color:#CCCCCC;background:#1F1F1F'>.</span><span style='font-size:8.0pt;
+font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>classList</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>.</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#DCDCAA;background:#1F1F1F'>add</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>(</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>currentPlayer</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>.</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#DCDCAA;background:#1F1F1F'>toLowerCase</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>());
+</span><span style='font-size:8.0pt;font-family:Consolas;color:#6A9955;
+background:#1F1F1F'>// Add class for styling</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>}</span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#569CD6;background:#1F1F1F'>function</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#DCDCAA;background:#1F1F1F'>handlePlayerChange</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>()
+{</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;
+background:#1F1F1F'>currentPlayer</span><span style='font-size:8.0pt;
+font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#D4D4D4;background:#1F1F1F'>=</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>currentPlayer</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#D4D4D4;background:#1F1F1F'>===</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>'X'</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#D4D4D4;background:#1F1F1F'>?</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>'O'</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#D4D4D4;background:#1F1F1F'>:</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>'X'</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;color:#4FC1FF;
+background:#1F1F1F'>statusDisplay</span><span style='font-size:8.0pt;
+font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>.</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>innerHTML</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#D4D4D4;background:#1F1F1F'>=</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>`Player
+</span><span style='font-size:8.0pt;font-family:Consolas;color:#569CD6;
+background:#1F1F1F'>${</span><span style='font-size:8.0pt;font-family:Consolas;
+color:#9CDCFE;background:#1F1F1F'>currentPlayer</span><span style='font-size:
+8.0pt;font-family:Consolas;color:#569CD6;background:#1F1F1F'>}</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>'s
+turn`</span><span style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;
+background:#1F1F1F'>;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>}</span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#569CD6;background:#1F1F1F'>function</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#DCDCAA;background:#1F1F1F'>handleResultValidation</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>()
+{</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;color:#569CD6;
+background:#1F1F1F'>let</span><span style='font-size:8.0pt;font-family:Consolas;
+color:#CCCCCC;background:#1F1F1F'> </span><span style='font-size:8.0pt;
+font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>roundWon</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#D4D4D4;background:#1F1F1F'>=</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#569CD6;background:#1F1F1F'>false</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;color:#C586C0;
+background:#1F1F1F'>for</span><span style='font-size:8.0pt;font-family:Consolas;
+color:#CCCCCC;background:#1F1F1F'> (</span><span style='font-size:8.0pt;
+font-family:Consolas;color:#569CD6;background:#1F1F1F'>let</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>i</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#D4D4D4;background:#1F1F1F'>=</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#B5CEA8;background:#1F1F1F'>0</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>;
+</span><span style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;
+background:#1F1F1F'>i</span><span style='font-size:8.0pt;font-family:Consolas;
+color:#CCCCCC;background:#1F1F1F'> </span><span style='font-size:8.0pt;
+font-family:Consolas;color:#D4D4D4;background:#1F1F1F'>&lt;</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#4FC1FF;background:#1F1F1F'>winningConditions</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>.</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>length</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>;
+</span><span style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;
+background:#1F1F1F'>i</span><span style='font-size:8.0pt;font-family:Consolas;
+color:#D4D4D4;background:#1F1F1F'>++</span><span style='font-size:8.0pt;
+font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>) {</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; &nbsp; &nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;
+color:#569CD6;background:#1F1F1F'>const</span><span style='font-size:8.0pt;
+font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#4FC1FF;background:#1F1F1F'>winCondition</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#D4D4D4;background:#1F1F1F'>=</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#4FC1FF;background:#1F1F1F'>winningConditions</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>[</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>i</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>];</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; &nbsp; &nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;
+color:#569CD6;background:#1F1F1F'>let</span><span style='font-size:8.0pt;
+font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>a</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#D4D4D4;background:#1F1F1F'>=</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>gameState</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>[</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#4FC1FF;background:#1F1F1F'>winCondition</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>[</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#B5CEA8;background:#1F1F1F'>0</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>]];</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; &nbsp; &nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;
+color:#569CD6;background:#1F1F1F'>let</span><span style='font-size:8.0pt;
+font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>b</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#D4D4D4;background:#1F1F1F'>=</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>gameState</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>[</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#4FC1FF;background:#1F1F1F'>winCondition</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>[</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#B5CEA8;background:#1F1F1F'>1</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>]];</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; &nbsp; &nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;
+color:#569CD6;background:#1F1F1F'>let</span><span style='font-size:8.0pt;
+font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>c</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#D4D4D4;background:#1F1F1F'>=</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>gameState</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>[</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#4FC1FF;background:#1F1F1F'>winCondition</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>[</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#B5CEA8;background:#1F1F1F'>2</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>]];</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; &nbsp; &nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;
+color:#C586C0;background:#1F1F1F'>if</span><span style='font-size:8.0pt;
+font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> (</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>a</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#D4D4D4;background:#1F1F1F'>===</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>''</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#D4D4D4;background:#1F1F1F'>||</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>b</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#D4D4D4;background:#1F1F1F'>===</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>''</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#D4D4D4;background:#1F1F1F'>||</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>c</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#D4D4D4;background:#1F1F1F'>===</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>''</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>)
+{</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style='font-size:8.0pt;
+font-family:Consolas;color:#C586C0;background:#1F1F1F'>continue</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; &nbsp; &nbsp; }</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; &nbsp; &nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;
+color:#C586C0;background:#1F1F1F'>if</span><span style='font-size:8.0pt;
+font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> (</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>a</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#D4D4D4;background:#1F1F1F'>===</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>b</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#D4D4D4;background:#1F1F1F'>&amp;&amp;</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>b</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#D4D4D4;background:#1F1F1F'>===</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>c</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>)
+{</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style='font-size:8.0pt;
+font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>roundWon</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#D4D4D4;background:#1F1F1F'>=</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#569CD6;background:#1F1F1F'>true</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style='font-size:8.0pt;
+font-family:Consolas;color:#C586C0;background:#1F1F1F'>break</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; &nbsp; &nbsp; }</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; }</span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;color:#C586C0;
+background:#1F1F1F'>if</span><span style='font-size:8.0pt;font-family:Consolas;
+color:#CCCCCC;background:#1F1F1F'> (</span><span style='font-size:8.0pt;
+font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>roundWon</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>)
+{</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; &nbsp; &nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;
+color:#4FC1FF;background:#1F1F1F'>statusDisplay</span><span style='font-size:
+8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>.</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>innerHTML</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#D4D4D4;background:#1F1F1F'>=</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>`Player
+</span><span style='font-size:8.0pt;font-family:Consolas;color:#569CD6;
+background:#1F1F1F'>${</span><span style='font-size:8.0pt;font-family:Consolas;
+color:#9CDCFE;background:#1F1F1F'>currentPlayer</span><span style='font-size:
+8.0pt;font-family:Consolas;color:#569CD6;background:#1F1F1F'>}</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>
+has won!`</span><span style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;
+background:#1F1F1F'>;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; &nbsp; &nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;
+color:#9CDCFE;background:#1F1F1F'>gameActive</span><span style='font-size:8.0pt;
+font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#D4D4D4;background:#1F1F1F'>=</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#569CD6;background:#1F1F1F'>false</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; &nbsp; &nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;
+color:#C586C0;background:#1F1F1F'>return</span><span style='font-size:8.0pt;
+font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; }</span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;color:#569CD6;
+background:#1F1F1F'>let</span><span style='font-size:8.0pt;font-family:Consolas;
+color:#CCCCCC;background:#1F1F1F'> </span><span style='font-size:8.0pt;
+font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>roundDraw</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#D4D4D4;background:#1F1F1F'>=</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#D4D4D4;background:#1F1F1F'>!</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>gameState</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>.</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#DCDCAA;background:#1F1F1F'>includes</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>(</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>''</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>);</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;color:#C586C0;
+background:#1F1F1F'>if</span><span style='font-size:8.0pt;font-family:Consolas;
+color:#CCCCCC;background:#1F1F1F'> (</span><span style='font-size:8.0pt;
+font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>roundDraw</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>)
+{</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; &nbsp; &nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;
+color:#4FC1FF;background:#1F1F1F'>statusDisplay</span><span style='font-size:
+8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>.</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>innerHTML</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#D4D4D4;background:#1F1F1F'>=</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>'Game
+ended in a draw!'</span><span style='font-size:8.0pt;font-family:Consolas;
+color:#CCCCCC;background:#1F1F1F'>;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; &nbsp; &nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;
+color:#9CDCFE;background:#1F1F1F'>gameActive</span><span style='font-size:8.0pt;
+font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#D4D4D4;background:#1F1F1F'>=</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#569CD6;background:#1F1F1F'>false</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; &nbsp; &nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;
+color:#C586C0;background:#1F1F1F'>return</span><span style='font-size:8.0pt;
+font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; }</span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;color:#DCDCAA;
+background:#1F1F1F'>handlePlayerChange</span><span style='font-size:8.0pt;
+font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>();</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>}</span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#569CD6;background:#1F1F1F'>function</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#DCDCAA;background:#1F1F1F'>handleCellClick</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>(</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>event</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>)
+{</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;color:#569CD6;
+background:#1F1F1F'>const</span><span style='font-size:8.0pt;font-family:Consolas;
+color:#CCCCCC;background:#1F1F1F'> </span><span style='font-size:8.0pt;
+font-family:Consolas;color:#4FC1FF;background:#1F1F1F'>clickedCell</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#D4D4D4;background:#1F1F1F'>=</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>event</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>.</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>target</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;color:#569CD6;
+background:#1F1F1F'>const</span><span style='font-size:8.0pt;font-family:Consolas;
+color:#CCCCCC;background:#1F1F1F'> </span><span style='font-size:8.0pt;
+font-family:Consolas;color:#4FC1FF;background:#1F1F1F'>clickedCellIndex</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#D4D4D4;background:#1F1F1F'>=</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#DCDCAA;background:#1F1F1F'>parseInt</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>(</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#4FC1FF;background:#1F1F1F'>clickedCell</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>.</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#DCDCAA;background:#1F1F1F'>getAttribute</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>(</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>'data-index'</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>));</span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;color:#C586C0;
+background:#1F1F1F'>if</span><span style='font-size:8.0pt;font-family:Consolas;
+color:#CCCCCC;background:#1F1F1F'> (</span><span style='font-size:8.0pt;
+font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>gameState</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>[</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#4FC1FF;background:#1F1F1F'>clickedCellIndex</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>]
+</span><span style='font-size:8.0pt;font-family:Consolas;color:#D4D4D4;
+background:#1F1F1F'>!==</span><span style='font-size:8.0pt;font-family:Consolas;
+color:#CCCCCC;background:#1F1F1F'> </span><span style='font-size:8.0pt;
+font-family:Consolas;color:#CE9178;background:#1F1F1F'>''</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#D4D4D4;background:#1F1F1F'>||</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#D4D4D4;background:#1F1F1F'>!</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>gameActive</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>)
+{</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; &nbsp; &nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;
+color:#C586C0;background:#1F1F1F'>return</span><span style='font-size:8.0pt;
+font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>; </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#6A9955;background:#1F1F1F'>//
+Ignore click if cell is already filled or game is over</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; }</span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;color:#DCDCAA;
+background:#1F1F1F'>handleCellPlayed</span><span style='font-size:8.0pt;
+font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>(</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#4FC1FF;background:#1F1F1F'>clickedCell</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>,
+</span><span style='font-size:8.0pt;font-family:Consolas;color:#4FC1FF;
+background:#1F1F1F'>clickedCellIndex</span><span style='font-size:8.0pt;
+font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>);</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;color:#DCDCAA;
+background:#1F1F1F'>handleResultValidation</span><span style='font-size:8.0pt;
+font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>();</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>}</span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#569CD6;background:#1F1F1F'>function</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#DCDCAA;background:#1F1F1F'>handleRestartGame</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>()
+{</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;
+background:#1F1F1F'>gameActive</span><span style='font-size:8.0pt;font-family:
+Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span style='font-size:8.0pt;
+font-family:Consolas;color:#D4D4D4;background:#1F1F1F'>=</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#569CD6;background:#1F1F1F'>true</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;
+background:#1F1F1F'>currentPlayer</span><span style='font-size:8.0pt;
+font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#D4D4D4;background:#1F1F1F'>=</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>'X'</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;
+background:#1F1F1F'>gameState</span><span style='font-size:8.0pt;font-family:
+Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span style='font-size:8.0pt;
+font-family:Consolas;color:#D4D4D4;background:#1F1F1F'>=</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>
+[</span><span style='font-size:8.0pt;font-family:Consolas;color:#CE9178;
+background:#1F1F1F'>''</span><span style='font-size:8.0pt;font-family:Consolas;
+color:#CCCCCC;background:#1F1F1F'>, </span><span style='font-size:8.0pt;
+font-family:Consolas;color:#CE9178;background:#1F1F1F'>''</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>,
+</span><span style='font-size:8.0pt;font-family:Consolas;color:#CE9178;
+background:#1F1F1F'>''</span><span style='font-size:8.0pt;font-family:Consolas;
+color:#CCCCCC;background:#1F1F1F'>, </span><span style='font-size:8.0pt;
+font-family:Consolas;color:#CE9178;background:#1F1F1F'>''</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>,
+</span><span style='font-size:8.0pt;font-family:Consolas;color:#CE9178;
+background:#1F1F1F'>''</span><span style='font-size:8.0pt;font-family:Consolas;
+color:#CCCCCC;background:#1F1F1F'>, </span><span style='font-size:8.0pt;
+font-family:Consolas;color:#CE9178;background:#1F1F1F'>''</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>,
+</span><span style='font-size:8.0pt;font-family:Consolas;color:#CE9178;
+background:#1F1F1F'>''</span><span style='font-size:8.0pt;font-family:Consolas;
+color:#CCCCCC;background:#1F1F1F'>, </span><span style='font-size:8.0pt;
+font-family:Consolas;color:#CE9178;background:#1F1F1F'>''</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>,
+</span><span style='font-size:8.0pt;font-family:Consolas;color:#CE9178;
+background:#1F1F1F'>''</span><span style='font-size:8.0pt;font-family:Consolas;
+color:#CCCCCC;background:#1F1F1F'>];</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;color:#4FC1FF;
+background:#1F1F1F'>statusDisplay</span><span style='font-size:8.0pt;
+font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>.</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>innerHTML</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#D4D4D4;background:#1F1F1F'>=</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>`Player
+</span><span style='font-size:8.0pt;font-family:Consolas;color:#569CD6;
+background:#1F1F1F'>${</span><span style='font-size:8.0pt;font-family:Consolas;
+color:#9CDCFE;background:#1F1F1F'>currentPlayer</span><span style='font-size:
+8.0pt;font-family:Consolas;color:#569CD6;background:#1F1F1F'>}</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>'s
+turn`</span><span style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;
+background:#1F1F1F'>;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;color:#4FC1FF;
+background:#1F1F1F'>cells</span><span style='font-size:8.0pt;font-family:Consolas;
+color:#CCCCCC;background:#1F1F1F'>.</span><span style='font-size:8.0pt;
+font-family:Consolas;color:#DCDCAA;background:#1F1F1F'>forEach</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>(</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>cell</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#569CD6;background:#1F1F1F'>=&gt;</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>
+{</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; &nbsp; &nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;
+color:#9CDCFE;background:#1F1F1F'>cell</span><span style='font-size:8.0pt;
+font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>.</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>innerHTML</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#D4D4D4;background:#1F1F1F'>=</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>''</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>;</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; &nbsp; &nbsp; </span><span style='font-size:8.0pt;font-family:Consolas;
+color:#9CDCFE;background:#1F1F1F'>cell</span><span style='font-size:8.0pt;
+font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>.</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>classList</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>.</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#DCDCAA;background:#1F1F1F'>remove</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>(</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>'x'</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>,
+</span><span style='font-size:8.0pt;font-family:Consolas;color:#CE9178;
+background:#1F1F1F'>'o'</span><span style='font-size:8.0pt;font-family:Consolas;
+color:#CCCCCC;background:#1F1F1F'>); </span><span style='font-size:8.0pt;
+font-family:Consolas;color:#6A9955;background:#1F1F1F'>// Remove styling
+classes</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>&nbsp;
+&nbsp; });</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>}</span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#4FC1FF;background:#1F1F1F'>cells</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>.</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#DCDCAA;background:#1F1F1F'>forEach</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>(</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>cell</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#569CD6;background:#1F1F1F'>=&gt;</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'> </span><span
+style='font-size:8.0pt;font-family:Consolas;color:#9CDCFE;background:#1F1F1F'>cell</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>.</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#DCDCAA;background:#1F1F1F'>addEventListener</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>(</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>'click'</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>,
+</span><span style='font-size:8.0pt;font-family:Consolas;color:#DCDCAA;
+background:#1F1F1F'>handleCellClick</span><span style='font-size:8.0pt;
+font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>));</span></p>
+
+<p class=MsoNormal style='line-height:11.4pt;background:#1F1F1F'><span
+style='font-size:8.0pt;font-family:Consolas;color:#4FC1FF;background:#1F1F1F'>resetButton</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>.</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#DCDCAA;background:#1F1F1F'>addEventListener</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>(</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CE9178;background:#1F1F1F'>'click'</span><span
+style='font-size:8.0pt;font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>,
+</span><span style='font-size:8.0pt;font-family:Consolas;color:#DCDCAA;
+background:#1F1F1F'>handleRestartGame</span><span style='font-size:8.0pt;
+font-family:Consolas;color:#CCCCCC;background:#1F1F1F'>);</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:12.0pt;font-family:SimSun'>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>
